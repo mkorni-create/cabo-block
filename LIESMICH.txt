@@ -1,0 +1,30 @@
+CABO BLOCK ALS ANDROID-APP
+==========================
+
+Inhalt dieses Ordners
+- index.html             die App (Punkteblock)
+- manifest.webmanifest   Name, Icon, Vollbild-Modus
+- sw.js                  macht die App offline nutzbar
+- icon-*.png             App-Icons
+
+Warum ein Webserver nötig ist
+Chrome auf Android installiert eine Web-App nur von einer https-Adresse.
+Die Datei direkt vom Handy-Speicher zu öffnen reicht dafür nicht.
+
+Einrichten mit GitHub Pages (kostenlos, einmalig ca. 10 Minuten)
+1. Auf github.com ein neues öffentliches Repository anlegen, z. B. "cabo-block".
+2. "Add file" > "Upload files": alle Dateien aus diesem Ordner hochladen
+   (nicht den Ordner selbst, index.html muss im Hauptverzeichnis liegen).
+3. Settings > Pages > Source "Deploy from a branch", Branch "main", Ordner "/ (root)" > Save.
+4. Nach 1 bis 2 Minuten steht oben die Adresse, z. B. https://<dein-name>.github.io/cabo-block/
+
+Auf dem Android-Handy installieren
+1. Die Adresse in Chrome öffnen.
+2. Menü (drei Punkte) > "App installieren" oder "Zum Startbildschirm hinzufügen".
+3. Die App einmal online starten. Danach läuft sie auch ohne Internet.
+
+Hinweise
+- Der Spielstand liegt nur auf dem Handy. Deinstallieren oder "Websitedaten löschen" löscht ihn.
+- Ein Spielstand aus dem Claude-Artefakt wird nicht übernommen, das sind getrennte Speicher.
+- Bei Änderungen an den Dateien in sw.js die VERSION hochzählen, dann holt sich die App
+  beim nächsten Online-Start die neue Fassung.
